@@ -1,0 +1,255 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="./assets/home/desktop/icon-coffee-bean.svg"
+/>
+<link rel="stylesheet" href="style.css">
+  <title>Coffeeroasters</title>
+</head>
+
+<body>
+  <nav class="flexrow">
+    <a href="index.html"><img src="./assets/logo.svg" alt="" /></a>
+    <input type="checkbox" name="" id="toggler" />
+    <label for="toggler" class="hamburger-icon">
+      <img src="./assets/shared/mobile/icon-hamburger.svg" alt=""
+    /></label>
+
+    <label for="toggler" class="close-icon">
+      <img src="./assets/shared/mobile/icon-close.svg" alt="" />
+    </label>
+
+    <ul>
+      <li><a href="./index.html">HOME</a></li>
+      <li><a href="./about.html">ABOUT US</a></li>
+      <li><a href="./plan.html">CREATE YOUR PLAN</a></li>
+    </ul>
+  </nav>
+
+  <header class="header-plan">
+    <h1>Create a plan</h1>
+    <p>
+      Build a subscription plan that best fits your needs. We offer an assortment of the best
+      artisan coffees from around the globe delivered fresh to your door.
+    </p>
+  </header>
+  <div class="how-it-works how-it-works-plan">
+    <div class="working-step">
+      <h4>01</h4>
+      <h3>Pick your coffee</h3>
+      <p>
+        Select from our evolving range of artisan coffees. Our beans are
+        ethically sourced and we pay fair prices for them. There are new
+        coffees in all profiles every month for you to try out.
+      </p>
+    </div>
+    <div class="working-step">
+      <h4>02</h4>
+      <h3>Choose the frequency</h3>
+      <p>
+        Customize your order frequency, quantity, even your roast style and
+        grind type. Pause, skip or cancel your subscription with no
+        commitment through our online portal.
+      </p>
+    </div>
+    <div class="working-step">
+      <h4>03</h4>
+      <h3>Receive and enjoy!</h3>
+      <p>
+        We ship your package within 48 hours, freshly roasted. Sit back and
+        enjoy award-winning world-class coffees curated to provide a
+        distinct tasting experience.
+      </p>
+    </div>
+  </div>
+
+  <div class="question-section">
+    <div class="question-header">
+      <h4 class="h4-style"><a href="#question1"><span>01</span> <span>Preferences</span></a></h4>
+      <h4 class="h4-style"><a href="#question2"><span>02</span> <span>Bean Type</span></a></h4>
+      <h4 class="h4-style"><a href="#question3"><span>03</span> <span>Quantity</span></a></h4>
+      <h4 class="h4-style"><a href="#question4"><span>04</span> <span>Grind Option</span></a></h4>
+      <h4 class="h4-style"><a href="#question5"><span>05</span> <span>Deliveries</span></a></h4>
+    </div>
+    <form class="question-list">
+      <div class="question-answer" id="question1">
+        <label for="question-toggler1">
+          <div class="question flexrow">
+            <h2 class="h2-style-grey">How do you drink your coffee?</h2>
+            <img src="./assets/plan/desktop/icon-arrow.svg" alt="">
+          </div>
+        </label>
+        <input type="checkbox" id="question-toggler1">
+        <div class="answer-list">
+          <div class="answer-choice flexcol">
+            <input type="radio" name="drink-coffee" id="capsule" value="Capsule" checked>
+            <label for="capsule" class="h6-style">Capsule</label>
+            <p>Compatible with Nespresso systems and similar brewers</p>
+          </div>
+          <div class="answer-choice flexcol">
+            <input type="radio" name="drink-coffee" id="filter" value="Filter">
+            <label for="filter" class="h6-style">Filter</label>
+            <p>For pour over or drip methods like Aeropress, Chemex, and V60</p>
+          </div>
+          <div class="answer-choice flexcol">
+            <input type="radio" name="drink-coffee" id="espresso" value="Espresso">
+            <label for="espresso" class="h6-style">Espresso</label>
+            <p>Dense and finely ground beans for an intense, flavorful experience</p>
+          </div>
+        </div>
+      </div>
+      <div class="question-answer" id="question2">
+        <label for="question-toggler2">
+          <div class="question flexrow">
+            <h2 class="h2-style-grey">What type of coffee?</h2>
+            <img src="./assets/plan/desktop/icon-arrow.svg" alt="">
+          </div>
+        </label>
+        <input type="checkbox" id="question-toggler2">
+        <div class="answer-list">
+          <div class="answer-choice flexcol">
+            <input type="radio" name="coffee-type" id="single-origin" value="Single origin" checked>
+            <label for="single-origin" class="h6-style">Single origin</label>
+            <p>Distinct, high quality coffee from a specific family-owned farm</p>
+          </div>
+          <div class="answer-choice flexcol">
+            <input type="radio" name="coffee-type" id="decaf" value="Decaf">
+            <label for="decaf" class="h6-style">Decaf</label>
+            <p>Just like regular coffee, except the caffeine has been removed</p>
+          </div>
+          <div class="answer-choice flexcol">
+            <input type="radio" name="coffee-type" id="blended" value="Blended">
+            <label for="blended" class="h6-style">Blended</label>
+            <p>Combination of two or three dark roasted beans of organic coffees</p>
+          </div>
+        </div>
+      </div>
+      <div class="question-answer" id="question3">
+        <label for="question-toggler3">
+          <div class="question flexrow">
+            <h2 class="h2-style-grey">How much would you like?</h2>
+            <img src="./assets/plan/desktop/icon-arrow.svg" alt="">
+          </div>
+        </label>
+        <input type="checkbox" id="question-toggler3">
+        <div class="answer-list">
+          <div class="answer-choice flexcol">
+            <input type="radio" name="coffee-amount" id="250g" value="250g" checked>
+            <label for="250g" class="h6-style">250g</label>
+            <p>Perfect for the solo drinker. Yields about 12 delicious cups.</p>
+          </div>
+          <div class="answer-choice flexcol">
+            <input type="radio" name="coffee-amount" id="500g" value="500g">
+            <label for="500g" class="h6-style">500g</label>
+            <p>Perfect option for a couple. Yields about 40 delectable cups.</p>
+          </div>
+          <div class="answer-choice flexcol">
+            <input type="radio" name="coffee-amount" id="1000g" value="1000g">
+            <label for="1000g" class="h6-style">1000g</label>
+            <p>Perfect for offices and events. Yields about 90 delightful cups.</p>
+          </div>
+        </div>
+      </div>
+      <div class="question-answer" id="question4">
+        <label for="question-toggler4">
+          <div class="question flexrow">
+            <h2 class="h2-style-grey">Want us to grind them?</h2>
+            <img src="./assets/plan/desktop/icon-arrow.svg" alt="">
+          </div>
+        </label>
+        <input type="checkbox" id="question-toggler4">
+        <div class="answer-list">
+          <div class="answer-choice flexcol">
+            <input type="radio" name="coffee-grind" id="wholebean" value="Wholebean" checked>
+            <label for="wholebean" class="h6-style">Wholebean</label>
+            <p>Best choice if you cherish the full sensory experience</p>
+          </div>
+          <div class="answer-choice flexcol">
+            <input type="radio" name="coffee-grind" id="filter" value="Filter">
+            <label for="filter" class="h6-style">Filter</label>
+            <p>For drip or pour-over coffee methods such as V60 or Aeropress</p>
+          </div>
+          <div class="answer-choice flexcol">
+            <input type="radio" name="coffee-grind" id="cafetiere" value="Cafetiere">
+            <label for="cafetiere" class="h6-style">Cafetiére</label>
+            <p>Course ground beans specially suited for french press coffee</p>
+          </div>
+        </div>
+      </div>
+      <div class="question-answer" id="question5">
+        <label for="question-toggler5">
+          <div class="question flexrow">
+            <h2 class="h2-style-grey">How often should we deliver?</h2>
+            <img src="./assets/plan/desktop/icon-arrow.svg" alt="">
+          </div>
+        </label>
+        <input type="checkbox" id="question-toggler5">
+        <div class="answer-list">
+          <div class="answer-choice flexcol">
+            <input type="radio" name="delivery-frequency" id="every-week" value="Every week" checked>
+            <label for="every-week" class="h6-style">Every week</label>
+            <p>$14.00 per shipment. Includes free first-class shipping.</p>
+          </div>
+          <div class="answer-choice flexcol">
+            <input type="radio" name="delivery-frequency" id="every-2-weeks" value="Every 2 weeks">
+            <label for="every-2-weeks" class="h6-style">Every 2 weeks</label>
+            <p>$17.25 per shipment. Includes free priority shipping.</p>
+          </div>
+          <div class="answer-choice flexcol">
+            <input type="radio" name="delivery-frequency" id="every-month" value="Every month">
+            <label for="every-month" class="h6-style">Every month</label>
+            <p>$22.50 per shipment. Includes free priority shipping.</p>
+          </div>
+        </div>
+      </div>
+      <div class="order-summary">
+        <p>ORDER SUMMARY</p>
+        <h5 class="h5-style" id="order-sentence">
+          I drink coffee <span class="green-text">Capsule</span>, with a
+    <span class="green-text">Single Origin</span> type of bean. <span class="green-text"> 250g</span>
+    ground ala <span class="green-text">Wholebean</span>, sent to me <span class="green-text">Every week</span>.
+        </h5>
+      </div>
+    </form>
+  </div>
+  <button type="submit"  class="button-style plan-button flexrow" onclick="generateCheckout()">Create my plan </button>
+  
+
+
+
+  <!-- Modal -->
+  <div class="checkout">
+    <h3 class="h3-style">Order Summary</h3>
+    <div class="checkout-desc">
+      <h5 class="h4-style checkout-sentence" id="checkout-sentence"></h5>
+      <p>
+        Is this correct? You can proceed to checkout or go back to plan selection if something
+        is off. Subscription discount codes can also be redeemed at the checkout.
+      </p>
+    </div>
+    
+    <button class="button-style button-checkout flexrow" id="checkout-button" onclick="closeCheckout()">Checkoutmonth </button>
+  </div>
+  <!-- End modal -->
+  <footer class="flexcol footer-plan">
+    <img src="./assets/shared/desktop/logo-white.svg" alt="" />
+    <ul>
+      <li><a href="./index.html">HOME</a></li>
+      <li><a href="./about.html">ABOUT US</a></li>
+      <li><a href="./plan.html">CREATE YOUR PLAN</a></li>
+    </ul>
+    <div class="media-social-logo">
+      <img src="./assets/shared/desktop/icon-facebook.svg" alt="" />
+      <img src="./assets/shared/desktop/icon-twitter.svg" alt="" />
+      <img src="./assets/shared/desktop/icon-instagram.svg" alt="" />
+    </div>
+  </footer>
+<script src="helper.js"></script>
+</body>
+
+</html>

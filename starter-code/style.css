@@ -1,0 +1,884 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&display=swap");
+
+:root {
+  /* Colors */
+  --clr-dark-cyan: 179, 81%, 20%;
+  --clr-light-cyan: 178, 55%, 61%;
+  --clr-dark-grey-blue: 215, 19%, 10%;
+  --clr-pale-orange: 25, 94%, 86%;
+  --clr-light-cream: 43, 78%, 98%;
+  --clr-grey: 215, 5%, 85%;
+  --clr-grey-dark: 215, 5%, 40%;
+  --clr-cream: 43, 30%, 88%;
+
+  /* font-family */
+  --ff-barlow: "Barlow", sans-serif;
+  --ff-fraunces: "Fraunces", serif;
+
+  /* font-sizes */
+  --fs-900: 9.375rem;
+  --fs-800: 4.5rem;
+  --fs-700: 2.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.5rem;
+  --fs-400: 1rem;
+  --fs-300: 0.75rem;
+
+  /* line-heights */
+  --line-h-800: 4.5rem; /*h1*/
+  --line-h-700: 3rem; /*h2*/
+  --line-h-600: 2.25rem; /*h3*/
+  --line-h-500: 2rem; /*h4*/
+  --line-h-400: 1.625rem; /*p*/
+  --line-h-300: 0.9375rem; /*nav*/
+
+  /* font-weight */
+  --fw-black: 900;
+  --fw-bold: 700;
+  --fw-regular: 400;
+}
+
+/*
+    1. Use a more-intuitive box-sizing model.
+  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  font-style: var(--ff-barlow);
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/* general styling */
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 0.875rem;
+  color: var(--clr-neutral-400);
+  background-color: hsl(var(--clr-light-cream));
+}
+
+.flexrow {
+  display: flex;
+  align-items: center;
+}
+
+.flexcol {
+  display: flex;
+  flex-direction: column;
+}
+
+.ff-frances {
+  font-family: var(--ff-fraunces);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.button-style {
+  font-family: var(--ff-fraunces);
+  font-weight: var(--fw-black);
+  background-color: hsl(var(--clr-dark-cyan));
+  outline: transparent;
+  border: none;
+  color: white;
+
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  border-radius: 0.3rem;
+}
+.coffee-mobile-img {
+  width: 200px;
+  margin: 0;
+}
+.section-desc-img {
+  width: 120px;
+  height: 90px;
+}
+
+/*-----------------Navigation--------------------*/
+nav {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+nav > * {
+  padding: 2em;
+}
+nav ul {
+  /* background-color: hsl(var(--clr-light-cream)); */
+  background: linear-gradient(white 30%, hsl(0, 0%, 59%, 0.5));
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  list-style-type: none;
+
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+  top: -100%;
+  padding: 0;
+}
+#toggler {
+  display: none;
+}
+.close-icon {
+  display: none;
+}
+#toggler:checked ~ ul {
+  top: 70px;
+}
+#toggler:checked ~ ul li {
+  font-family: var(--ff-fraunces);
+  color: var(--clr-dark-cyan);
+  font-weight: var(--fw-bold);
+  padding: 0.9em;
+  font-size: 1.5rem;
+}
+#toggler:checked ~ .hamburger-icon {
+  display: none;
+}
+#toggler:checked ~ .close-icon {
+  display: block;
+}
+
+#toggler:checked ~ body {
+  overflow-y: hidden; /* Hide the vertical scrollbar */
+  position: fixed; /* Prevent scrolling of the content */
+}
+.no-scroll {
+  overflow-y: hidden;
+}
+/*----------------Header-------------------------*/
+
+header {
+  background-image: url(./assets/home/mobile/image-hero-coffeepress.jpg);
+  background-size: cover;
+  text-align: center;
+
+  border-radius: 0.5rem;
+  margin: 1em;
+  padding: 6em 1em;
+}
+
+header > * {
+  margin: 0.8em 0;
+}
+header h1 {
+  font-family: var(--ff-fraunces);
+  color: hsl(var(--clr-light-cream));
+
+  font-size: 2.5rem;
+}
+
+header p {
+  color: hsl(var(--clr-grey));
+
+  font-size: 1.2rem;
+}
+/*-----------------------Main-------------------------*/
+main {
+  align-items: center;
+  text-align: center;
+
+  margin: 4em 1em;
+}
+main > * {
+  padding: 1em 0;
+}
+.h2-style {
+  font-family: var(--ff-fraunces);
+  font-size: 2rem;
+}
+.h3-style {
+  font-family: var(--ff-fraunces);
+  font-size: 1.5rem;
+}
+.h4-style {
+  font-family: var(--ff-fraunces);
+  font-size: 1.2rem;
+}
+.h5-style {
+  font-family: var(--ff-fraunces);
+  font-size: 1.2rem;
+  color: white;
+}
+.h6-style {
+  font-family: var(--ff-fraunces);
+  font-size: 0.1rem;
+}
+.coffee-section {
+  align-items: center;
+}
+.coffee-collection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+}
+.coffee-container {
+  align-items: center;
+  width: 60%;
+}
+.coffee-desc > * {
+  padding: 0.5em;
+}
+.coffee-container h3 {
+  font-family: var(--ff-fraunces);
+  font-size: 1.2rem;
+}
+
+/*-------------why-choose-use---------------------*/
+.why-choose-us-container {
+  height: 120%;
+}
+.why-choose-us {
+  background-color: hsl(var(--clr-dark-grey-blue));
+  color: hsl(var(--clr-light-cream));
+  align-items: center;
+  text-align: center;
+
+  height: 728px;
+  border-radius: 0.4rem;
+  margin: 1em;
+  padding-top: 2em;
+}
+.why-choose-us > h2,
+.why-choose-us > p {
+  /* max-width: 88%; */
+  padding: 0.5em 1em;
+}
+.why-choose-us h3 {
+  font-size: 1.4rem;
+  font-family: var(--ff-fraunces);
+  padding-top: 2em;
+}
+.section-desc-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 95%;
+  padding: 2em 0;
+}
+.section-desc {
+  background-color: hsl(var(--clr-dark-cyan));
+  align-items: center;
+
+  width: 90%;
+  border-radius: 1rem;
+  padding: 3em 0;
+  margin: 1em 1.5em;
+}
+.section-desc > * {
+  padding: 0 2em;
+}
+
+.section-desc-text > * {
+  max-width: 250px;
+  padding: 0.5em 0;
+}
+/*----------How it works--------------------*/
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 7rem 1rem;
+}
+.h2-style-grey {
+  color: hsl(var(--clr-grey-dark));
+  font-family: var(--ff-fraunces);
+  padding: 1.5em;
+}
+.working-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  max-width: 300px;
+  margin: 1em 0;
+}
+.how-it-works h3 {
+  flex: 2;
+  font-family: var(--ff-fraunces);
+}
+.how-it-works p {
+  flex: auto;
+}
+.how-it-works h4 {
+  color: hsl(var(--clr-pale-orange));
+  font-family: var(--ff-fraunces);
+  font-size: 3.5rem;
+}
+.how-it-works button {
+  margin-top: 3rem;
+}
+
+/*------------Footer------------------*/
+footer {
+  background-color: hsl(var(--clr-dark-grey-blue));
+  color: hsl(var(--clr-light-cream));
+  align-items: center;
+
+  padding: 3em;
+}
+footer ul {
+  list-style-type: none;
+  font-weight: var(--fw-regular);
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+footer ul li {
+  color: hsl(var(--clr-grey));
+  padding: 1em;
+}
+footer > img {
+  padding: 1em;
+  color: white;
+}
+.media-social-logo {
+  display: flex;
+  gap: 1.4rem;
+  padding: 2em;
+}
+
+/*-------------------About--------------------*/
+.header-about {
+  background-image: url(./assets/about/mobile/image-hero-whitecup.jpg);
+  padding: 5em 0;
+}
+
+/* .commitment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+.commitment-img {
+  /* margin: 4em 0; */
+  margin: 4em auto;
+  padding: 0;
+  border-radius: 1rem;
+  max-height: 600px;
+}
+.quality-container {
+  background-color: hsl(var(--clr-dark-grey-blue));
+  color: white;
+  position: relative;
+  align-items: center;
+  border-radius: 0.5rem;
+  margin-top: 8em;
+  margin-bottom: 4em;
+  padding: 2em;
+}
+.quality-img {
+  width: 100%;
+  border-radius: 2rem;
+  margin: 3em 0;
+  padding: 0em;
+}
+.commitment-desc > * {
+  padding: 0;
+  padding-bottom: 0.5em;
+}
+.quality-container p {
+  padding-top: 1em;
+  padding-bottom: 3em;
+  color: hsl(var(--clr-grey));
+}
+/*------------------------Region---------------------*/
+.region {
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.headquarter {
+  align-items: center;
+}
+.region-img {
+  flex: 1;
+  width: 2.5em;
+  margin: 3rem 0;
+}
+.region h3 {
+  margin-bottom: 1.5em;
+}
+
+/*----------------Plan-----------------------*/
+.header-plan {
+  background-image: url(./assets/plan//mobile/image-hero-blackcup.jpg);
+  padding: 10em 1em;
+  background-size: cover;
+}
+.how-it-works-plan {
+  background-color: hsl(var(--clr-dark-grey-blue));
+  color: white;
+  border-radius: 1rem;
+  padding: 3em 1em;
+}
+
+/*--------------question-list-------------------*/
+.question-header {
+  display: none;
+  color: hsl(var(--clr-grey-dark));
+}
+
+.question-list {
+  margin: 1em;
+}
+.question-list h2 {
+  padding: 0;
+}
+.question {
+  justify-content: space-between;
+  padding-top: 2em;
+}
+.answer-choice {
+  background-color: hsl(var(--clr-cream));
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+}
+.answer-choice label {
+  font-family: var(--ff-fraunces);
+  font-weight: var(--fw-bold);
+  font-size: 1.2rem;
+  padding: 0.3em 0;
+}
+#question-toggler1,
+#question-toggler2,
+#question-toggler3,
+#question-toggler4,
+#question-toggler5 {
+  display: none;
+}
+#question-toggler1:checked ~ .answer-list,
+#question-toggler2:checked ~ .answer-list,
+#question-toggler3:checked ~ .answer-list,
+#question-toggler4:checked ~ .answer-list,
+#question-toggler5:checked ~ .answer-list {
+  display: none;
+}
+
+.answer-choice input[type="radio"] {
+  display: none;
+}
+
+.answer-choice.selected {
+  background-color: hsl(var(--clr-dark-cyan));
+  color: hsl(var(--clr-cream));
+  padding: 1.5em;
+  margin: 1em 0;
+  border-radius: 0.5em;
+}
+.green-text {
+  color: hsl(var(--clr-dark-cyan));
+}
+.plan-button {
+  margin: 1em auto;
+  /* margin-bottom: 7em; */
+}
+.footer-plan {
+  margin-top: 8em;
+}
+/*-----------------order-summary------------------*/
+.order-summary {
+  background-color: hsl(var(--clr-dark-grey-blue));
+
+  margin: 4em 0;
+  padding: 1.5em;
+  border-radius: 0.5rem;
+}
+.order-summary p {
+  color: hsl(var(--clr-grey-dark));
+  padding: 0.5em 0;
+}
+/*------------------Checkout-------------------*/
+.checkout {
+  margin: 1em;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5), 0 0 2rem rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.checkout h3 {
+  background-color: hsl(var(--clr-dark-grey-blue));
+  color: hsl(var(--clr-light-cream));
+  padding: 1em;
+}
+.checkout-sentence {
+  color: black;
+}
+.checkout-desc {
+  background-color: hsl(var(--clr-light-cream));
+  padding: 1em;
+}
+.checkout-desc h5 {
+  padding: 0.8em 0;
+}
+.button-checkout {
+  margin: 1em auto;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 20px;
+  }
+  .hamburger-icon {
+    display: none;
+  }
+  nav ul {
+    background: transparent;
+    position: static;
+    list-style-type: none;
+    color: hsl(var(--clr-grey-dark));
+
+    flex-direction: row;
+    align-items: center;
+
+    width: fit-content;
+    height: fit-content;
+    gap: 1rem;
+    top: 0%;
+    padding: 2em;
+  }
+  header {
+    background-image: url(./assets/home/tablet/image-hero-coffeepress.jpg);
+    padding: 2em 5em;
+    text-align: left;
+  }
+  header > * {
+    max-width: 550px;
+    width: 70%;
+  }
+  header h1 {
+    max-width: 400px;
+  }
+  .why-choose-us-container {
+    margin-top: 8rem;
+    height: 97%;
+  }
+  .why-choose-us {
+    height: 630px;
+    border-radius: 1rem;
+    margin: 1em;
+    padding-top: 2em;
+  }
+  .why-choose-us p {
+    max-width: 700px;
+  }
+  .coffee-container {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 1em;
+    width: 80%;
+  }
+  .coffee-mobile-img {
+    width: 240px;
+  }
+
+  .section-desc {
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    gap: 1em;
+  }
+  .section-desc-text {
+    width: 50%;
+  }
+  .section-desc-img {
+    width: 160px;
+  }
+
+  .section-desc-text h3 {
+    padding: 0;
+    margin: 0;
+  }
+
+  .how-it-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 5rem 1rem;
+    padding: 2em;
+  }
+  .how-it-works h2 {
+    padding: 2em 0;
+  }
+  .working-step-list {
+    display: flex;
+    text-align: justify;
+    gap: 2em;
+  }
+
+  .working-step h3 {
+    text-align: left;
+  }
+  .working-step > * {
+    flex: 1;
+    width: 100%;
+    max-width: 235px;
+    padding: 0;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+  }
+  /*----------------About-----------------------*/
+  .header-about {
+    background: url("./assets/about/tablet/image-hero-whitecup.jpg");
+    padding: 6em 4em;
+    background-size: cover;
+    text-align: left;
+  }
+  .header-about p {
+    margin: 0;
+    width: 60%;
+  }
+  .commitment {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin: 6em 0;
+    gap: 1em;
+  }
+  .commitment-img-container {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+  .commitment-img {
+    margin: 0;
+  }
+  .commitment-desc {
+    flex: 1;
+    text-align: justify;
+    padding: 0 1em;
+    max-width: 450px;
+  }
+  .quality-desc {
+    width: 50%;
+  }
+  .region {
+    align-items: center;
+  }
+  .headquarter-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 2em;
+  }
+  .headquarter {
+    flex: 1;
+    align-items: center;
+  }
+
+  /*--------------------Create your plan------------------------*/
+  .header-plan {
+    background: url("./assets/plan/tablet/image-hero-blackcup.jpg");
+    padding: 5em 4em;
+    background-size: cover;
+  }
+  .how-it-works-plan {
+    flex-direction: row;
+    text-align: left;
+    align-items: start;
+    justify-content: center;
+    gap: 2em;
+  }
+  .working-step {
+    display: flex;
+    flex-direction: column;
+  }
+  /* .working-step > h3 {
+    flex: 3;
+  } */
+  .answer-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: 300px; */
+    gap: 1rem;
+  }
+
+  .answer-choice {
+    height: 250px;
+    /* aspect-ratio: 5/7; */
+  }
+  .order-summary {
+    padding: 2em 5em;
+  }
+  .checkout {
+    margin: 5em;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5), 0 0 2rem rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    font-size: 22px;
+  }
+  nav ul {
+    background: transparent;
+  }
+  header {
+    background-image: url(./assets/home/desktop/image-hero-coffeepress.jpg);
+    padding: 2em 7em;
+  }
+  .coffee-collection {
+    flex-direction: row;
+    width: 80%;
+  }
+  .coffee-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2em;
+  }
+  .why-choose-us-container {
+    height: 70%;
+  }
+  .why-choose-us {
+    height: 500px;
+  }
+  .section-desc-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .section-desc {
+    flex: 0 1 auto;
+    flex-direction: column;
+    text-align: center;
+    gap: 2em;
+  }
+  .section-desc-text {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+  }
+  .section-desc-text > * {
+    flex: 1;
+    max-width: none;
+  }
+  .how-it-works {
+    width: 90%;
+    margin: 4em auto;
+  }
+  .working-step-list {
+    gap: 4em;
+  }
+  .header-about {
+    background: url("./assets/about/desktop/image-hero-whitecup.jpg");
+    padding: 4em 4em;
+    background-size: cover;
+  }
+  .commitment {
+    align-items: center;
+  }
+  .commitment-desc {
+    flex: 1;
+    text-align: justify;
+    padding: 0 1em;
+    max-width: 750px;
+  }
+  .header-plan {
+    background: url("./assets/plan/desktop/image-hero-blackcup.jpg");
+    padding: 7em 6em;
+    background-size: cover;
+  }
+  .quality-container {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    gap: 8em;
+  }
+  .quality-container picture {
+    order: 3;
+  }
+  .quality-desc {
+    max-width: 600px;
+  }
+
+  .question-section {
+    display: flex;
+    justify-content: center;
+    margin: 0 5em;
+    gap: 4em;
+  }
+
+  .question-header {
+    display: block;
+    width: 40%;
+    padding-top: 2em;
+  }
+  .question-header h4 {
+    padding: 0.5em 0;
+    border-bottom: 1px solid hsl(var(--clr-grey));
+  }
+  .checkout {
+    margin: 5em 20em;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5), 0 0 2rem rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+}
