@@ -180,6 +180,10 @@ nav ul {
   top: -100%;
   padding: 0;
 }
+nav ul a {
+  text-align: center;
+  width: 100%;
+}
 #toggler {
   display: none;
 }
@@ -291,7 +295,7 @@ main > * {
 
 /*-------------why-choose-use---------------------*/
 .why-choose-us-container {
-  height: 120%;
+  height: 140%;
 }
 .why-choose-us {
   background-color: hsl(var(--clr-dark-grey-blue));
@@ -601,6 +605,10 @@ footer > img {
     top: 0%;
     padding: 2em;
   }
+  nav ul a {
+    text-align: center;
+    width: fit-content;
+  }
   header {
     background-image: url(./assets/home/tablet/image-hero-coffeepress.jpg);
     padding: 2em 5em;
@@ -819,14 +827,22 @@ footer > img {
   }
   .section-desc-text > * {
     flex: 1;
-    max-width: none;
+    max-width: 400px;
   }
   .how-it-works {
-    width: 90%;
+    width: 97%;
     margin: 4em auto;
   }
   .working-step-list {
-    gap: 4em;
+    justify-content: center;
+    width: 90%;
+    gap: 5em;
+  }
+  .working-step {
+    max-width: 400px;
+  }
+  .working-step > * {
+    max-width: 400px;
   }
   .header-about {
     background: url("./assets/about/desktop/image-hero-whitecup.jpg");
@@ -858,6 +874,9 @@ footer > img {
   }
   .quality-desc {
     max-width: 600px;
+  }
+  .headquarter-container {
+    max-width: 1400px;
   }
 
   .question-section {
